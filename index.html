@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de HTML</title>
+    <base href="https://www.tudominio.com/"> <!-- URL base para enlaces relativos -->
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+
+    <!-- Metadatos para SEO y accesibilidad -->
+    <meta name="description" content="Página de ejemplo con estructura HTML básica">
+    <meta name="keywords" content="HTML, CSS, seguridad, redes, tutorial">
+    <meta name="author" content="Alejandro">
+    <meta name="robots" content="index, follow"> <!-- Indica a los motores de búsqueda que pueden indexar la página -->
+    <style>
+        /* Estilo general */
+        body {
+            font-family: Arial, sans-serif;
+            background: url(imagenes/fondo.png) repeat-x top center;
+            background-size: cover;
+            color: rgb(0, 0, 0);
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <hgroup>
+            <h1><mark
+                    style=" background-color: cadetblue; color: black; font-family: Georgia, 'Times New Roman', Times, serif;">Mi
+                    Página Web</mark></h1>
+            <h2><em>Aprendiendo sobre <abbr title="HyperText Markup Language">HTML</abbr></em></h2>
+        </hgroup>
+        <h2 style="color: burlywood; font-family: 'Times new roman';">Cursando el cuatrimestre #5</h2>
+        <h3 style="font-family: Georgia, 'Times New Roman', Times, serif;"> Materias cursadas:</h3>
+        <nav>
+            <ul>
+                <li><a
+                        href="https://es.wix.com/blog/diseno-web?utm_source=google&utm_medium=cpc&utm_campaign=20707654283^157965726874^search%20-%20dsa&experiment_id=^^678385444558^&gad_source=1&gad_campaignid=20707654283&gbraid=0AAAAADwEfwXNwTrUArMSTXOPI861jD3zM&gclid=Cj0KCQjw_8rBBhCFARIsAJrc9yBl-RbPOeeKTNt5M7697U_yA7jHFYVadUvuRiGg-ac_1IByCmYzcXIaAh1NEALw_wcB">Web</a>
+                </li>
+                <li><a href="https://www.utn.ac.cr/nuevo-programa-ingles-intensivo-regular">Ingles 4</a></li>
+                <li><a
+                        href="https://sinac.go.cr/ES/transprncia/Planificacin%20y%20Gestin%20BID/Capacitaciones%20del%20Proyecto/Cuaderno%20Administraci%C3%B3n%20y%20Contabilidad%20B%C3%A1sica.pdf">Contabilidad
+                        Básica</a></li>
+                <li><a href="https://ingenieriayeficiencia.com/diseno-e-implementacion-de-redes/">Implementacion de
+                        redes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <a href="https://www.google.com/maps/place//@10.0073962,-84.2166092,3a,75y,21.88h,90t/data=!3m8!1e1!3m6!1sCIHM0ogKEICAgID09_yDCg!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAB8u6HavbFeupp4K7-W9EdoHuec1RhggTGUzXRWJlBWAatxRPlmEWw4TpUJZ8Q-XKNLekP1lgxD4GZzpEq7V_OKwEK_tEvLg9jX0dJFL_7BAizZfBONx-su5prqLc3P7DqSwFUuYwj0%3Dw900-h600-k-no-pi0-ya282.8831638745564-ro0-fo100!7i8704!8i4352!4m2!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D"
+            target="_blank">
+            <img src="imagenes/mapa UTN.png" alt="Mapa de la UTN" width="500" height="300">
+        </a>
+
+        <section id="inicio">
+            <h2>Inicio</h2>
+            <p><strong>Bienvenido a mi página.</strong> Aquí estarémos poniendo aprueba nuestras habilidades de html.
+            </p>
+            <p>Conoce más sobre HTML en <a href="https://developer.mozilla.org/es/docs/Web/HTML"
+                    target="_blank"><code>Web Docs</code></a>.</p>
+        </section>
+
+        <section id="sobre-mi">
+            <h2>Sobre mí</h2>
+            <p>Hola, soy Alejandro, mis hoobies son <b> el gimnasio</b>, <i>la tecnologia</i>, el estudio y los
+                videojuegos.</p>
+            <p><cite>"web hecha por Alejandro SC".</cite></p>
+            <p>Este texto fue modificado: <del>Versión anterior</del> <ins>Nueva versión mejorada</ins></p>
+            <p>Estudio desarrollo web en la Universidad <dfn title="Universidad Técnica Nacional">UTN</dfn>.</p>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Puedes escribirme a: <kbd><a href="mailto:ale1010192@gmail.com">alejandro@gmail.com</a></kbd></p>
+            <address>
+                <p>Ubicación: San Rafael, Alajuela, Costa Rica</p>
+                <p>Teléfono: <data value="+50612345678">+506 1234-5678</data></p>
+                <p>Fecha de actualización: <time datetime="2025-05-24">25 de mayo de 2025</time></p>
+            </address>
+        </section>
+
+        <section>
+            <h2 title="Universidad Técnica Nacional">UTN logo</h2>
+            <figure>
+                <source srcset="imagenes/utn.png" type="image/png">
+                <img src="imagenes/utn.png" alt="Ejemplo de imagen" usemap="#utn-map" width="500" height="300">
+                <figcaption>Imagen ilustrativa con mapa interactivo y adaptación según formato.</figcaption>
+            </figure>
+
+            <map name="utn-map">
+                <area shape="rect" coords="50,50,150,150" href="https://www.utn.ac.cr/" alt="Sitio oficial de la UTN">
+                <area shape="circle" coords="200,200,50" href="https://www.utn.ac.cr/campus" alt="Campus UTN">
+            </map>
+        </section>
+
+        <section id="multimedia">
+            <h2>Contenido Multimedia</h2>
+
+            <audio controls>
+                <source src="audio.mp3" type="audio/mpeg">
+                <source src="audio.ogg" type="audio/ogg">
+                Tu navegador no soporta la etiqueta de audio.
+            </audio>
+
+            <video controls width="500">
+                <source src="video.mp4" type="video/mp4">
+                <source src="video.webm" type="video/webm">
+                <track src="subtitulos.vtt" kind="subtitles" srclang="es" label="Español">
+                Tu navegador no soporta la etiqueta de video.
+            </video>
+
+            <canvas id="cuadrado" width="400" height="200"></canvas>
+            <script>
+                const canvas = document.getElementById("cuadrado");
+                const ctx = canvas.getContext("2d");
+                ctx.fillStyle = "blue";
+                ctx.fillRect(50, 50, 100, 100);
+            </script>
+
+
+            <svg width="200" height="200">
+                <circle cx="100" cy="100" r="70" fill="black" />
+            </svg>
+
+        </section>
+
+        <article>
+            <h2>Artículo Destacado</h2>
+            <blockquote>
+                "La disciplina es el puente entre metas y logros." - <cite>Jim Rohn</cite>
+            </blockquote>
+            <q>La educación es el arma más poderosa que puedes usar para cambiar el mundo.</q>
+            <p>El aprendizaje continuo es <span style="color: green;">fundamental</span> para cualquier desarrollador.
+            </p>
+        </article>
+
+        <aside>
+            <h3>Enlaces recomendados</h3>
+            <ol>
+                <li><a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank">Tutorial de HTML</a></li>
+                <li><a href="https://developer.mozilla.org/es/docs/Web/CSS" target="_blank">Curso de CSS</a></li>
+                <li><a href="https://owasp.org/" target="_blank">Guía de seguridad informática</a></li>
+            </ol>
+        </aside>
+
+        <div class="video-container">
+            <h2>Video Educativo</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/3JluqTojuME" title="Video Tutorial"
+                frameborder="5" allowfullscreen></iframe>
+        </div>
+
+        <details>
+            <summary>Más información sobre HTML</summary>
+            <p><dfn title="HyperText Markup Language"><strong>Importante:</strong></dfn> <i>Aprender</i> HTML es esencial porque es la base de toda la web. Nos permite estructurar contenido, crear páginas accesibles y desarrollar proyectos interactivos con facilidad. Con HTML, podemos integrar imágenes, videos y enlaces, lo que nos abre las puertas al diseño web, la optimización para motores de búsqueda y la accesibilidad digital. Dominar HTML es el primer paso para convertir ideas en sitios funcionales y prepararnos para tecnologías más avanzadas como CSS y JavaScript.</p>
+        </details>
+
+        <dl>
+            <dt>HTML</dt>
+            <dd><span>Lenguaje de marcado para estructurar páginas web.</span></dd>
+            <dt>CSS</dt>
+            <dd><span>Lenguaje de estilos para diseñar el aspecto visual de una página.</span></dd>
+            <dt>JavaScript</dt>
+            <dd><span>Lenguaje de programación para agregar interactividad a las páginas web.</span></dd>
+        </dl>
+
+        <pre>
+        Test de funciones:
+            (Utilizacion de pre)
+        </pre>
+        <br>
+
+        <dialog id="myDialog">
+            <p>Cuadro de prueba.</p>
+            <button onclick="document.getElementById('myDialog').close()">
+            <img src= "imagenes/cerrar.png" alt="Cerrar" width="30" height="40">
+            </button>
+        </dialog>
+
+        <button onclick="document.getElementById('myDialog').showModal()">Abrir diálogo</button>
+    </main>
+
+    <footer>
+        <address>Contacto: <a href="mailto:ale1010192@gmail.com">alejandro@gmail.com</a></address>
+        <p><small>&copy; <time datetime="2025">2025</time> Alejandro</small></p>
+    </footer>
+
+
+</body>
+
+</html>
