@@ -5,37 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejemplo de HTML</title>
-    <base href="https://www.tudominio.com/"> <!-- URL base para enlaces relativos -->
-    <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="style.css">
+<!-- <base href="https://alesc203.github.io/Tarea1/" target="_blank"> -->
+
 
     <!-- Metadatos para SEO y accesibilidad -->
     <meta name="description" content="Página de ejemplo con estructura HTML básica">
     <meta name="keywords" content="HTML, CSS, seguridad, redes, tutorial">
     <meta name="author" content="Alejandro">
-    <meta name="robots" content="index, follow"> <!-- Indica a los motores de búsqueda que pueden indexar la página -->
-    <style>
-        /* Estilo general */
-        body {
-            font-family: Arial, sans-serif;
-            background: url(imagenes/fondo.png) repeat-x top center;
-            background-size: cover;
-            color: rgb(0, 0, 0);
-            text-align: center;
-        }
-    </style>
+    <meta name="robots" content="index, follow"> 
+    <!-- Indica a los motores de búsqueda cómo deben indexar la página  index: permite que los buscadores guarden la pagina en sus resultados,  follow: indica que deben seguir los enlaces dentro de la pagina -->
+    
 
 </head>
 
-<body>
+<body class="general">
 
-    <header>
+    <header >
         <hgroup>
-            <h1><mark
-                    style=" background-color: cadetblue; color: black; font-family: Georgia, 'Times New Roman', Times, serif;">Mi
+            <h1 ><mark
+                    style=" background-color: rgb(245, 237, 194); color: rgb(248, 247, 247); font-family: Georgia, 'Times New Roman', Times, serif;">Mi
                     Página Web</mark></h1>
             <h2><em>Aprendiendo sobre <abbr title="HyperText Markup Language">HTML</abbr></em></h2>
         </hgroup>
-        <h2 style="color: burlywood; font-family: 'Times new roman';">Cursando el cuatrimestre #5</h2>
+        <h2 style="color: rgb(4, 6, 158); font-family: 'Times new roman';">Cursando el cuatrimestre #5</h2>
         <h3 style="font-family: Georgia, 'Times New Roman', Times, serif;"> Materias cursadas:</h3>
         <nav>
             <ul>
@@ -56,7 +49,7 @@
 
         <a href="https://www.google.com/maps/place//@10.0073962,-84.2166092,3a,75y,21.88h,90t/data=!3m8!1e1!3m6!1sCIHM0ogKEICAgID09_yDCg!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAB8u6HavbFeupp4K7-W9EdoHuec1RhggTGUzXRWJlBWAatxRPlmEWw4TpUJZ8Q-XKNLekP1lgxD4GZzpEq7V_OKwEK_tEvLg9jX0dJFL_7BAizZfBONx-su5prqLc3P7DqSwFUuYwj0%3Dw900-h600-k-no-pi0-ya282.8831638745564-ro0-fo100!7i8704!8i4352!4m2!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D"
             target="_blank">
-            <img src="imagenes/mapa UTN.png" alt="Mapa de la UTN" width="500" height="300">
+            <img src="imagenes/mapaUTN.png" alt="Mapa de la UTN" width="500" height="300">
         </a>
 
         <section id="inicio">
@@ -91,31 +84,35 @@
             <figure>
                 <source srcset="imagenes/utn.png" type="image/png">
                 <img src="imagenes/utn.png" alt="Ejemplo de imagen" usemap="#utn-map" width="500" height="300">
-                <figcaption>Imagen ilustrativa con mapa interactivo y adaptación según formato.</figcaption>
-            </figure>
+                <figcaption>Imagen ilustrativa con mapa interactivo .</figcaption>
+                </figure>
+                
+                <map name="utn-map">
+                    <!-- Área izquierda (Desde el borde izquierdo hasta la mitad de la imagen) -->
+                    <area shape="rect" coords="0,0,250,300" href="https://www.utn.ac.cr/" alt="Sitio oficial de la UTN">
+                
+                    <!-- Área derecha (Desde la mitad hasta el borde derecho) -->
+                    <area shape="rect" coords="250,0,500,300" href="https://www.utn.ac.cr/campus" alt="Campus UTN">
+                </map>
 
-            <map name="utn-map">
-                <area shape="rect" coords="50,50,150,150" href="https://www.utn.ac.cr/" alt="Sitio oficial de la UTN">
-                <area shape="circle" coords="200,200,50" href="https://www.utn.ac.cr/campus" alt="Campus UTN">
-            </map>
+            <hr style="border: 2px solid rgb(11, 0, 77);">
         </section>
 
         <section id="multimedia">
             <h2>Contenido Multimedia</h2>
 
             <audio controls>
-                <source src="audio.mp3" type="audio/mpeg">
-                <source src="audio.ogg" type="audio/ogg">
-                Tu navegador no soporta la etiqueta de audio.
+                <source src="audios/intensity-by-audio-club-343637.mp3" type="audio/mp3">
             </audio>
 
             <video controls width="500">
-                <source src="video.mp4" type="video/mp4">
-                <source src="video.webm" type="video/webm">
+                <source src="audios/Música de Fondo Instrumental Inspiradora - Música para Videos.mp4" type="video/mp4">
                 <track src="subtitulos.vtt" kind="subtitles" srclang="es" label="Español">
-                Tu navegador no soporta la etiqueta de video.
             </video>
+            <hr style="border: 2px solid rgb(11, 0, 77);">
+        </section>
 
+        <section>
             <canvas id="cuadrado" width="400" height="200"></canvas>
             <script>
                 const canvas = document.getElementById("cuadrado");
@@ -124,11 +121,10 @@
                 ctx.fillRect(50, 50, 100, 100);
             </script>
 
-
             <svg width="200" height="200">
                 <circle cx="100" cy="100" r="70" fill="black" />
             </svg>
-
+            <hr style="border: 2px solid rgb(11, 0, 77);">
         </section>
 
         <article>
@@ -137,7 +133,7 @@
                 "La disciplina es el puente entre metas y logros." - <cite>Jim Rohn</cite>
             </blockquote>
             <q>La educación es el arma más poderosa que puedes usar para cambiar el mundo.</q>
-            <p>El aprendizaje continuo es <span style="color: green;">fundamental</span> para cualquier desarrollador.
+            <p>El aprendizaje continuo es <span style="color: rgb(238, 255, 7);">fundamental</span> para cualquier desarrollador.
             </p>
         </article>
 
@@ -188,7 +184,7 @@
 
     <footer>
         <address>Contacto: <a href="mailto:ale1010192@gmail.com">alejandro@gmail.com</a></address>
-        <p><small>&copy; <time datetime="2025">2025</time> Alejandro</small></p>
+        <p><small>&copy; <time datetime="2025">2025</time> Alejandro <sup>03</sup></small></p>
     </footer>
 
 

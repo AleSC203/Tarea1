@@ -1,4 +1,12 @@
 
+        /* Estilo general */
+        .general {
+            font-family: Arial, sans-serif;
+           background: url(imagenes/fondo.png) repeat-x top center; 
+            background-size: cover;
+            color: rgb(252, 250, 250);
+            text-align: center;
+        }
     
 
 
